@@ -1,0 +1,30 @@
+// Main Header Block (BEM)
+.main-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 10px 20px
+  background-color: $background-light
+  transition: background-color 0.3s ease
+
+  &.dark-mode
+    background-color: $background-dark
+
+  &__logo
+    max-width: 150px
+    height: auto
+
+  &__buttons
+    display: flex
+    gap: 10px
+
+  &__button
+    @extend .button // Inherit from the base button class
+    margin: 0
+
+  &__button--toggle
+    background-color: $primary-color-dark
+    transition: background-color 0.3s ease
+
+    &:hover
+      background-color: darken($primary-color-dark, 10%)
